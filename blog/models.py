@@ -11,7 +11,7 @@ class Recipe(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE,
                                 related_name="recipes")
     created_on = models.DateTimeField(auto_now=True)
-    featured_image = CloudinaryField('image', default='placeholder')
+    featured_image = CloudinaryField("image", default="placeholder")
     excerpt = models.TextField(blank=True)
     ingredients = SummernoteTextField()
     instructions = SummernoteTextField()
@@ -22,3 +22,27 @@ class Recipe(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name="recipe_likes",
                                 blank=True)
+
+    class Meta:
+        ordering =["-created_on"]
+
+    def __str__(self):
+        return self.title
+    
+    def number_of_likes(self):
+        return self.likes.count()
+
+class Comment(models.Model):
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE,
+                                related_name="comments")
+    name = models.ForeignKey(User, on_delete=models.CASCADE,
+                                related_name="user_comments")
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-created_on"]
+
+    def __str__(self):
+        return f"Comment {self.body} by {self.name}"
