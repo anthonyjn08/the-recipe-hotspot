@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django_summernote.fields import SummernoteTextField
 from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -13,8 +12,8 @@ class Recipe(models.Model):
     created_on = models.DateTimeField(auto_now=True)
     featured_image = CloudinaryField("image", default="placeholder")
     excerpt = models.TextField(blank=True)
-    ingredients = SummernoteTextField()
-    instructions = SummernoteTextField()
+    ingredients = models.TextField()
+    instructions = models.TextField()
     cooking_time = models.IntegerField()
     updated_on = models.DateTimeField(auto_now=True)
     meal_type = models.CharField(max_length=50)
