@@ -1,11 +1,31 @@
-{% extends "base.html"}
+{% extends "base.html" %}
 
 {% block content %}
 
 <div class="container">
 
     <div class="row">
-        <div class="col-4"></div>
+        <div class="col-4">
+            {% if "placeholder" in recipe.featured_image.url %}
+            <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg"
+                alt="placeholder">
+            {% else %}
+            <img class="card-img-top" src=" {{ recipe.featured_image.url }}">
+            {% endif %}
+        </div>
+        <div class="col-6">
+            <h2 class="post-title">{{ recipe.title }}</h2>
+            <p>{{ recipe.excerpt }}</p>
+            <p>Recipe by {{ recipe.author }} on {{recipe.created_on }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <h3>Recipe Ingredients</h3>
+        <div>{{ recipe.ingredients | safe }}</div>
+    </div>
+    <div class="row">
+        <h3>Recipe Instructions</h3>
+        <p>{{ recipe.instructions | safe }}</p>
     </div>
 </div>
 
