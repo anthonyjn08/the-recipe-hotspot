@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from .models import Recipe
+from .forms import RecipeForm
 
 
 class RecipeList(generic.ListView):
@@ -29,3 +30,14 @@ class RecipeDetail(View):
                 "liked": liked
             }
         )
+
+
+def add_recipe(request):
+    """
+    Add recipe page
+    """
+    recipe_form = RecipeForm(data=request.POST)
+
+    if request.method == 'POST':
+        if recipe_form.is_valid():
+            recipe = recipe_form.save(commit=False)
