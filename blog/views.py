@@ -1,7 +1,28 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import generic, View
+from django.views.generic import CreateView
 from .models import Recipe
 from .forms import RecipeForm
+
+
+def add_recipe(request):
+    recipe_form = RecipeForm(data=request.POST)
+
+    if request.method == 'POST':
+        if recipe_form.is_valid():
+            recipe_form = recipe_form.save(commit=False)
+            recipe_form.title = recipe_form.title
+            recipe_form.author = request.user
+            recipe_form.status = 1
+            recipe_form.save()
+            return redirect(reverse('home'))
+
+    context = {
+        'recipe_form': recipe_form
+    }
+
+    return render(request, 'add_recipe.html', context)
 
 
 class RecipeList(generic.ListView):
@@ -30,14 +51,3 @@ class RecipeDetail(View):
                 "liked": liked
             }
         )
-
-
-def add_recipe(request):
-    """
-    Add recipe page
-    """
-    recipe_form = RecipeForm(data=request.POST)
-
-    if request.method == 'POST':
-        if recipe_form.is_valid():
-            recipe = recipe_form.save(commit=False)

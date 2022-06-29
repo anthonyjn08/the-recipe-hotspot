@@ -1,6 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.utils.text import slugify
+
+slug=models.SlugField()
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -25,8 +28,14 @@ class Recipe(models.Model):
     class Meta:
         ordering =["-created_on"]
 
+    prepopulated_fields = {'slug': ('title',)}
+
     def __str__(self):
         return self.title
+
+    def save(self,*args,**kwargs):
+        self.slug=slugify(self.title)
+        super(Recipe,self).save(*args,**kwargs)
     
     def number_of_likes(self):
         return self.likes.count()
