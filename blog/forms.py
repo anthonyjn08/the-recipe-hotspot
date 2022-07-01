@@ -1,3 +1,4 @@
+from django_summernote.widgets import SummernoteWidget
 from .models import Recipe
 from django import forms
 
@@ -16,4 +17,8 @@ class RecipeForm(forms.ModelForm):
             'meal_tags',
         ]
 
+        widgets = {
+                'ingredients': SummernoteWidget(),
+                'instructions': SummernoteWidget(),
+            }
     

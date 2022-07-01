@@ -32,6 +32,12 @@ class EditRecipe(UpdateView):
     success_url = '/'
 
 
+class DeleteRecipe(DeleteView):
+    model = Recipe
+    template_name = 'delete_recipe.html'
+    success_url = reverse_lazy('home')
+
+
 class RecipeList(generic.ListView):
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')
