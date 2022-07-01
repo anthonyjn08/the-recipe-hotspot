@@ -15,3 +15,5 @@ class RecipeForm(forms.ModelForm):
             'meal_type',
             'meal_tags',
         ]
+
+    

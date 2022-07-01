@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import generic, View
-from django.views.generic import CreateView
+from django.views.generic.edit import UpdateView, DeleteView
+from django.urls import reverse_lazy
 from .models import Recipe
 from .forms import RecipeForm
 
@@ -23,6 +23,13 @@ def add_recipe(request):
     }
 
     return render(request, 'add_recipe.html', context)
+    
+
+class EditRecipe(UpdateView):
+    model = Recipe
+    form_class = RecipeForm
+    template_name = 'edit_recipe.html'
+    success_url = '/'
 
 
 class RecipeList(generic.ListView):
