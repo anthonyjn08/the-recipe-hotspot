@@ -7,7 +7,7 @@ from .forms import RecipeForm
 
 
 def add_recipe(request):
-    recipe_form = RecipeForm(data=request.POST)
+    recipe_form = RecipeForm(request.POST, request.FILES)
 
     if request.method == 'POST':
         if recipe_form.is_valid():
