@@ -41,6 +41,7 @@ class Recipe(models.Model):
         return self.likes.count()
 
 class Comment(models.Model):
+
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE,
                                 related_name="comments")
     name = models.ForeignKey(User, on_delete=models.CASCADE,

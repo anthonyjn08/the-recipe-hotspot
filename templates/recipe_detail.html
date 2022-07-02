@@ -45,6 +45,7 @@
     {% endif %}
     <hr>
     <div class="row">
+        
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3>Comments:</h3>
             <div class="card-body">
@@ -60,6 +61,21 @@
                 </div>
                 {% endfor %}
             </div>
+        </div>
+        <div class="col-md card mb-4 mt-3">
+            <div class="card-body">
+                {% if user.is_authenticated %}
+
+                <h3>Leave a comment:</h3>
+                <p>Posting as : {{ user.username }}</p>
+                <form method="post" style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+                {% endif %}
+            </div>
+            
         </div>
     </div>
 </div>

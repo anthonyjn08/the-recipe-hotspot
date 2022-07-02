@@ -2,11 +2,14 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.views.generic.edit import UpdateView, DeleteView
 from django.urls import reverse_lazy
+from django.contrib.auth.decorators import login_required
 from .models import Recipe
-from .forms import RecipeForm
+from .forms import RecipeForm, CommentForm
 
 
+@login_required
 def add_recipe(request):
+    print(request.user)
     recipe_form = RecipeForm(request.POST, request.FILES)
 
     if request.method == 'POST':
@@ -61,6 +64,36 @@ class RecipeDetail(View):
             {
                 "recipe": recipe,
                 "comments": comments,
-                "liked": liked
-            }
+                "liked": liked,
+                "comment_form": CommentForm()
+            },
+        )
+
+    def post(self, request, slug, *args, **kwargs):
+        queryset = Recipe.objects.filter(status=1)
+        recipe = get_object_or_404(queryset, slug=slug)
+        comments = recipe.comments.order_by('created_on')
+        liked = False
+        if recipe.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
+        comment_form = CommentForm(data=request.POST)
+
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.recipe = recipe
+            comment.name = request.user
+            comment.save()
+
+        else:
+            comment_form = CommentForm()
+
+        return render(
+            request, "recipe_detail.html",
+            {
+                "recipe": recipe,
+                "comments": comments,
+                "liked": liked,
+                "comment_form": CommentForm()
+            },
         )

@@ -1,5 +1,5 @@
 from django_summernote.widgets import SummernoteWidget
-from .models import Recipe
+from .models import Recipe, Comment
 from django import forms
 
 
@@ -23,7 +23,7 @@ class RecipeForm(forms.ModelForm):
             }
 
 
-class CommentForm:
+class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ('body',)
+        fields = ['body']
