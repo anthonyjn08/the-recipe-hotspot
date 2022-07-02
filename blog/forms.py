@@ -21,4 +21,9 @@ class RecipeForm(forms.ModelForm):
                 'ingredients': SummernoteWidget(),
                 'instructions': SummernoteWidget(),
             }
-    
+
+
+class CommentForm:
+    class Meta:
+        model = Comment
+        fields = ('body',)
