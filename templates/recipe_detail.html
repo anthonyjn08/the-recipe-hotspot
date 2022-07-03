@@ -29,15 +29,50 @@
         <h3>Recipe Instructions</h3>
         <p>{{ recipe.instructions | safe }}</p>
     </div>
+    <div class="row">
+        <div class="col-1">
+            <strong>
+                {% if user.is_authenticated %}
+                <form action="{% url 'recipe_like' recipe.slug %}" class="d-inline" method="POST">
+                    {% csrf_token %}
+                    {% if liked %}
+
+                    <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn btn-like"><i
+                            class="fas fa-heart"></i></button>
+
+                    {% else %}
+
+                    <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn btn-like"><i
+                            class="far fa-heart"></i></button>
+
+                    {% endif %}
+
+                </form>
+                {% else %}
+
+                <span class="text-secondary"><i class="far fa-heart"></i></span>
+                {% endif %}
+                <span class="text-secondary">{{ recipe.number_of_likes }}</span>
+            </strong>
+        </div>
+        <div class="col-1">
+            {% with comments.count as total_comments %}
+            <strong class="text-secondary"><i class="far fa-comments"></i>
+                {{ total_comments}}
+            </strong>
+            {% endwith %}
+        </div>
+    </div>
     {% if user.is_authenticated %}
     {% if user.id == recipe.author.id %}
     <div class="row">
         <div class="col-6">
             <h5>Update or Delete your recipe:</h5>
             <p class="edit-delete">
-                <a href="{% url 'edit_recipe' recipe.slug %}"><button
-                    class="btn btn-outline-success edit-recipe"><i class="fa-solid fa-pen-to-square"></i> Edit</button></i></a>
-                <a href="{% url 'delete_recipe' recipe.slug %}"><button class="btn btn-outline-danger"><i class="fa-solid fa-dumpster"></i> Delete</button></a>
+                <a href="{% url 'edit_recipe' recipe.slug %}"><button class="btn btn-outline-success edit-recipe"><i
+                            class="fa-solid fa-pen-to-square"></i> Edit</button></i></a>
+                <a href="{% url 'delete_recipe' recipe.slug %}"><button class="btn btn-outline-danger"><i
+                            class="fa-solid fa-dumpster"></i> Delete</button></a>
             </p>
         </div>
     </div>
@@ -45,7 +80,7 @@
     {% endif %}
     <hr>
     <div class="row">
-        
+
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3>Comments:</h3>
             <div class="card-body">
@@ -75,7 +110,7 @@
                 </form>
                 {% endif %}
             </div>
-            
+
         </div>
     </div>
 </div>
