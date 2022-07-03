@@ -94,6 +94,15 @@
                     </p>
                     {{ comment.body | linebreaks }}
                 </div>
+                {% if request.user == comment.name %}
+                <a href="{% url 'delete_comment' comment.id %}"><button class="btn btn-outline-danger"><i
+                    class="fa-solid fa-dumpster"></i> Delete</button></a>
+                <!-- <form method="POST" action="{% url 'delete_comment' comment.pk %}">
+                    {% csrf_token %}
+                    <button class="btn btn-outline-danger"><i
+                        class="fa-solid fa-dumpster"></i> Delete</button>
+                </form> -->
+                {% endif %}
                 {% endfor %}
             </div>
         </div>

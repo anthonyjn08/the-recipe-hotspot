@@ -1,6 +1,6 @@
 from . import views
 from django.urls import path
-
+from .views import EditRecipe, DeleteRecipe
 
 urlpatterns = [
     path('', views.RecipeList.as_view(), name='home'),
@@ -10,5 +10,7 @@ urlpatterns = [
     path('delete_recipe/<slug:slug>', views.DeleteRecipe.as_view(),
                     name='delete_recipe'),
     path('<slug:slug>/', views.RecipeDetail.as_view(), name='recipe_detail'),
-    path('like/<slug:slug>', views.RecipeLike.as_view(), name='recipe_like')
+    path('like/<slug:slug>', views.RecipeLike.as_view(), name='recipe_like'),
+    path('delete_comment/<int:pk>', views.DeleteComment.as_view(),
+        name='delete_comment'),
 ]

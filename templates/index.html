@@ -11,21 +11,24 @@
             {% for recipe in recipe_list %}
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in recipe.featured_image.url %}
-                                <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link"></a><img class="card-img-top"
-                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="placeholder"></a>
-                                {% else %}
-                                <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link"><img class="card-img-top" src=" {{ recipe.featured_image.url }}"></a>
-                                {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Author: {{ recipe.author }}</p>
-                                </div>
-                            </div>
+                        <div class="card-body justify-content-md-center">
                             <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link">
-                                <h2 class="card-title">{{ recipe.title }}</h2>
-                                <p class="card-text">{{ recipe.excerpt }}</p>
+                                <div class="title text-center">
+                                    <h2 class="card-title">{{ recipe.title }}</h2>
+                                </div>
+                                <div class="image-container">
+                                    {% if "placeholder" in recipe.featured_image.url %}
+                                    <img class="card-img-top"
+                                        src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="placeholder">
+                                    {% else %}
+                                    <img class="card-img-top" src=" {{ recipe.featured_image.url }}">
+                                    {% endif %}
+                                    <div class="image-flash">
+                                        <p class="author">Author: {{ recipe.author }}</p>
+                                    </div>
+                                </div>
+                                <!-- <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link"> -->
+                                <p class="card-text text-center">{{ recipe.excerpt }}</p>
                             </a>
                             <hr>
                             <p class="card-text text-muted h6">{{ recipe.created_on }} <i

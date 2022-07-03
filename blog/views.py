@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.views.generic.edit import UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
-from .models import Recipe
+from .models import Recipe, Comment
 from .forms import RecipeForm, CommentForm
 
 
@@ -111,3 +111,9 @@ class RecipeLike(View):
             recipe.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
+
+
+class DeleteComment(DeleteView):
+    model = Comment
+    template_name = 'delete_comment.html'
+    success_url = reverse_lazy('home')
