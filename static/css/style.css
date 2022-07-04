@@ -1,16 +1,34 @@
 body {
-    background-color: #F8F8FF;
+    background-color: #FFFFFC;
+}
+
+.bg-nav {
+    background-color: #6800b2;
+}
+
+#navbar-text {
+    color: #fff;
+}
+
+.hero-image {
+    background: url(https://res.cloudinary.com/anthonyjn08/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1656941787/menu-lg_rwn6j8.jpg) no-repeat center center fixed;
+    height: 25rem;
+    width: 100%;
+}
+
+.index-card {
+    border: 1px solid #BEB7A4;
+    background-color: transparent;
 }
 
 .card {
-    border: 1px solid #E01616;
+    border: none;
     background-color: transparent;
 }
 
 .title {
-    background-color: #000000;
-    color: #fff;
     text-transform: uppercase;
+    font-family: Pacifico;
 }
 
 .image-container {
@@ -23,11 +41,10 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #E01616;
 }
 
 .author {
-    color: white;
+    color: #000;
     margin: 4px;
     text-transform: uppercase;
 }
