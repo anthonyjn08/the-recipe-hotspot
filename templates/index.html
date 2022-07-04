@@ -2,15 +2,32 @@
 
 {% block content %}
 
-<div class="container-fluid mt-3">
+<!-- Welcome section -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 text-center">
+            {% if user.is_authenticated %}
+                <h1>Hi {{user.username}}</h1>
+                <p>Welcome to The Recipe Hotspot</p>
+                <p>Your favourite recipes all in one spot!</p>
+            {% else %}
+                <h1>Welcome to The Recipe Hotspot</h1>
+                <p>Feel free to browse</p>
+                <p>To post your own recipes please <a href="{% url 'account_login' %}">Login!</a> or <a href="{% url 'account_signup' %}">Sign Up!</a></p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt-5">
     <div class="row">
 
         <!-- Recipe Entries Column -->
         <div class="col-12 left">
             <div class="row">
             {% for recipe in recipe_list %}
-                <div class="col-md-4">
-                    <div class="index-card mb-4">
+                <div class="col-md-4 mt-2 mb-2">
+                    <div class="index-card mb-4 h-100">
                         <div class="card-body justify-content-md-center">
                             <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link">
                                 <div class="title text-center">
