@@ -10,6 +10,9 @@ from .forms import RecipeForm, CommentForm
 
 @login_required
 def add_recipe(request):
+    """
+    View to add recipe.
+    """
     print(request.user)
     recipe_form = RecipeForm(request.POST, request.FILES)
 
@@ -30,6 +33,9 @@ def add_recipe(request):
     
 
 class EditRecipe(UpdateView):
+    """
+    View to edit recipe.
+    """
     model = Recipe
     form_class = RecipeForm
     template_name = 'edit_recipe.html'
@@ -37,12 +43,18 @@ class EditRecipe(UpdateView):
 
 
 class DeleteRecipe(DeleteView):
+    """
+    View for deletion of recipe.
+    """
     model = Recipe
     template_name = 'delete_recipe.html'
     success_url = reverse_lazy('home')
 
 
 class RecipeList(generic.ListView):
+    """
+    Recipe list view displays recipes on homepage
+    """
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
@@ -50,7 +62,9 @@ class RecipeList(generic.ListView):
 
 
 class RecipeDetail(View):
-    
+    """
+    Recipe detail view to display full recipe when clicked on.
+    """    
     def get(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
@@ -101,7 +115,9 @@ class RecipeDetail(View):
 
 
 class RecipeLike(View):
-
+    """
+    Recipe like view displays number of likes for recipe.
+    """
     def post(self, request, slug):
         recipe = get_object_or_404(Recipe, slug=slug)
 
@@ -114,6 +130,9 @@ class RecipeLike(View):
 
 
 class DeleteComment(DeleteView):
+    """
+    Delete comment view.
+    """
     model = Comment
     template_name = 'delete_comment.html'
     success_url = reverse_lazy('home')
