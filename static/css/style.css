@@ -2,8 +2,12 @@ body {
     background-color: #F8F8FF;
 }
 
+nav ul {
+    color: #fff;
+}
+
 .card {
-    border: none;
+    border: 1px solid #E01616;
     background-color: transparent;
 }
 
