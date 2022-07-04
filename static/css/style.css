@@ -2,26 +2,28 @@ body {
     background-color: #F8F8FF;
 }
 
-nav ul {
-    color: #fff;
-}
-
 .card {
     border: 1px solid #E01616;
     background-color: transparent;
 }
 
+.title {
+    background-color: #000000;
+    color: #fff;
+    text-transform: uppercase;
+}
+
 .image-container {
-    /* position: relative; */
+    position: relative;
     text-align: center;
 }
 
 .image-flash {
-    position: absolute;
+    /* position: justify; */
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #23BBBB;
+    background-color: #E01616;
 }
 
 .author {
