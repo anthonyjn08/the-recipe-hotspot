@@ -3,18 +3,7 @@ body {
 }
 
 .bg-nav {
-    background-color: #6800b2;
-}
-
-.hero-image {
-    background: url(https://res.cloudinary.com/anthonyjn08/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1656941787/menu-lg_rwn6j8.jpg) no-repeat center center fixed;
-    height: 25rem;
-    width: 100%;
-}
-
-.hero-text{
-    position: absolute;
-    color: #000000;
+    background-color: #B9B9B9;
 }
 
 .index-card {
@@ -25,6 +14,10 @@ body {
 .card {
     border: none;
     background-color: transparent;
+}
+
+.caveat-text {
+    font-family: Caveat;
 }
 
 .title {
@@ -59,4 +52,8 @@ body {
 .post-link {
     text-decoration: none;
     color: #000000;
+}
+
+.bg-footer {
+    background: #D6EFFF;
 }

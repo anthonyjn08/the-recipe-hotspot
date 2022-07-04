@@ -136,3 +136,6 @@ class DeleteComment(DeleteView):
     model = Comment
     template_name = 'delete_comment.html'
     success_url = reverse_lazy('home')
+
+def about(request):
+    return render(request, 'about.html')
