@@ -2,8 +2,8 @@ body {
     background-color: #FFFFFC;
 }
 
-.bg-nav {
-    background-color: #B9B9B9;
+.excerpt {
+    color: #000;
 }
 
 .index-card {
@@ -20,9 +20,11 @@ body {
     font-family: Caveat;
 }
 
-.title {
+.brand {
     text-transform: uppercase;
     font-family: Caveat;
+    text-decoration: underline #E01616;
+    color: #000;
 }
 
 .image-container {

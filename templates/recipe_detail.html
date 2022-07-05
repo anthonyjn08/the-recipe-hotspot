@@ -16,7 +16,7 @@
             {% endif %}
         </div>
         <div class="col-6">
-            <h2 class="post-title">{{ recipe.title }}</h2>
+            <h2 class="title">{{ recipe.title }}</h2>
             <p>{{ recipe.excerpt }}</p>
             <p>Cooking Time: {{ recipe.cooking_time }} mins.</p>
             <p>Recipe by {{ recipe.author }} on {{recipe.created_on }}</p>
@@ -31,6 +31,7 @@
         <p>{{ recipe.instructions | safe }}</p>
     </div>
     <div class="row">
+
         <div class="col-1">
             <strong>
                 {% if user.is_authenticated %}
@@ -38,12 +39,12 @@
                     {% csrf_token %}
                     {% if liked %}
 
-                    <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn btn-like"><i
+                    <button type="submit" name="blogpost_id" value="{recipe.slug}}" class="btn-like"><i
                             class="fas fa-heart"></i></button>
 
                     {% else %}
 
-                    <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn btn-like"><i
+                    <button type="submit" name="blogpost_id" value="{{recipe.slug}}" class="btn btn-like"><i
                             class="far fa-heart"></i></button>
 
                     {% endif %}
@@ -55,12 +56,13 @@
                 {% endif %}
                 <span class="text-secondary">{{ recipe.number_of_likes }}</span>
             </strong>
+
         </div>
         <div class="col-1">
             {% with comments.count as total_comments %}
             <strong class="text-secondary"><i class="far fa-comments"></i>
-                {{ total_comments}}
-            </strong>
+                <!-- Our total_comments variable goes before the closing strong tag -->
+                {{ total_comments}}</strong>
             {% endwith %}
         </div>
     </div>
