@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<div class="container mt-5">
+<div class="container-fluid mt-5">
 
     <div class="row">
         <div class="col-4">
@@ -19,16 +19,22 @@
             <h2 class="brand">{{ recipe.title }}</h2>
             <p>{{ recipe.excerpt }}</p>
             <p>Cooking Time: {{ recipe.cooking_time }} mins.</p>
+            <p>Meal Type: {{recipe.meal_type}}</p>
+            <p>Meal Tags: {{recipe.meal_tags}}</p>
             <p>Recipe by {{ recipe.author }} on {{recipe.created_on }}</p>
         </div>
     </div>
     <div class="row">
-        <h3 class="brand">Recipe Ingredients</h3>
-        <div>{{ recipe.ingredients | safe }}</div>
+        <div class="col-10 offset-md-1">
+            <h3 class="brand">Recipe Ingredients</h3>
+            <div>{{ recipe.ingredients | safe }}</div>
+        </div>
     </div>
     <div class="row">
-        <h3 class="brand">Recipe Instructions</h3>
-        <p>{{ recipe.instructions | safe }}</p>
+        <div class="col-10 offset-md-1">
+            <h3 class="brand">Recipe Instructions</h3>
+            <p>{{ recipe.instructions | safe }}</p>
+        </div>
     </div>
     <div class="row">
 
