@@ -26,9 +26,13 @@ The colour scheme of the website was dictated by the sites logo, made up of the 
 
 The navbar is made using bootstrap classes to style and add responsiveness. It features the sites logo and various links. Different links are displayed dependent on if the current visitor is logged in or not. For smaller screens there is a navbar toggler to make navigation on smaller screens a pleasant experience.
 
-### **Homepage
+### **Homepage**
 
 The homepage displays welcome message. The message displayed will depend on if the visitor is logged in or not. There is a 2 rows of 3 recipes cards, making 6 in total, which is the limit before the user will need to change page. The recipe cards display the title, image for recipe, an excerpt describing the recipe, author, creation date and how many likes it has.
+
+### **Recipe Detail Page**
+
+The recipe detail page opens when users click on a recipe. It displays the full recipe details, such as ingredients, instructions and cooking time. The image is also displayed and logged in users have ability to like/unlike the recipe and add or view comments.
 
 
 
