@@ -14,6 +14,14 @@ I want the site to almost have a blog like feel with the UI displaying 2 rows of
 
 The sites log was designed by a childhood friend who I've know for about 30 years. He studied graphic design at college and although he doesn't work as a designer he has kept up his love for it as a hobby. I asked him to provide a log for a recipe website with no specific colour palette in mind. As he knows me so well he designed the logo with my favourite colour combinations in mind.
 
+### **Colour Scheme**
+
+The colour scheme of the website was dictated by the sites logo, made up of the colours black, white and red. The colours have a have a natural contrast which should lead to easy readability.
+
+* Black #000
+* Red #E01616
+* White #FFFFFC
+
 ## ** User Stories**
 
 * As a **Site User** I can...
