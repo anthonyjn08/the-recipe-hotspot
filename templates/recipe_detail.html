@@ -16,18 +16,18 @@
             {% endif %}
         </div>
         <div class="col-6">
-            <h2 class="title">{{ recipe.title }}</h2>
+            <h2 class="brand">{{ recipe.title }}</h2>
             <p>{{ recipe.excerpt }}</p>
             <p>Cooking Time: {{ recipe.cooking_time }} mins.</p>
             <p>Recipe by {{ recipe.author }} on {{recipe.created_on }}</p>
         </div>
     </div>
     <div class="row">
-        <h3>Recipe Ingredients</h3>
+        <h3 class="brand">Recipe Ingredients</h3>
         <div>{{ recipe.ingredients | safe }}</div>
     </div>
     <div class="row">
-        <h3>Recipe Instructions</h3>
+        <h3 class="brand">Recipe Instructions</h3>
         <p>{{ recipe.instructions | safe }}</p>
     </div>
     <div class="row">

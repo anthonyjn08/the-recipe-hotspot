@@ -8,10 +8,10 @@
         <div class="col-12 text-center">
             {% if user.is_authenticated %}
                 <h1>Hi {{user.username}}</h1>
-                <p>Welcome to <span class="caveat-text">The Recipe Hotspot</span></p>
+                <p>Welcome to <span class="brand">The Recipe Hotspot</span></p>
                 <p>Your favourite recipes all in one spot!</p>
             {% else %}
-                <h1><span class="caveat-text">The Recipe Hotspot</span></h1>
+                <h1><span class="brand">The Recipe Hotspot</span></h1>
                 <p>Feel free to browse our recipes</p>
                 <p>To share your own recipes please <a class="brand" href="{% url 'account_login' %}">Login!</a> or <a class="brand" href="{% url 'account_signup' %}">Sign Up!</a></p>
             {% endif %}
