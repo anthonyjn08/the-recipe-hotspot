@@ -2,25 +2,29 @@
 
 ## **Aim of the Site**
 
-The aim of the site is to allow users to find and post their favourite recipes. Users will be able to like their favourite recipes and be involved in the conversation as well by commenting on recipes. Site users can also upload their own recipes to share with the sites user community.
+The aim of the site is to allow users to share their favourite recipes with the site community and search for new recipes to try. Users will be able to like their favourite recipes and be involved in the conversation with the post owner by commenting on recipes. 
 
 ## **Planning stage**
 
-I want the site to almost have a blog like feel with the UI displaying 2 rows of 3 recipes previews, which users are then able to click on to be taken to the full recipe detail view. I have also included meal type and meal tags in the recipe model to allow users to be able to search for these from a sidebar on the main page. The meal types will be starter, main etc and the meal tags will include things such as what meat/fruits are in the meal, or even if the meal is gluten free.
+I wanted the site to almost have a blog like feel with the UI displaying 2 rows of 3 recipes previews, which users are then able to click on to be taken to the full recipe detail view. I included meal type and meal tags in the recipe model to allow users to be able to search for these from a sidebar on the main page, although this feature is not currently live on the website and will be included in a future udpate to the site.  The meal types will be starter, main etc and the meal tags will include things such as what meat/fruits are in the meal, or even if the meal is gluten free.
 
 ## **Website Design**
 
 ### **The Recipe Hotspot Logo**
 
-The sites log was designed by a childhood friend who I've know for about 30 years. He studied graphic design at college and although he doesn't work as a designer he has kept up his love for it as a hobby. I asked him to provide a log for a recipe website with no specific colour palette in mind. As he knows me so well he designed the logo with my favourite colour combinations in mind.
+The sites log was designed by a childhood friend who I've know for about 30 years. He studied graphic design at college and although he doesn't work as a designer he has kept up his love for it as a hobby. I asked him to provide a logo for a recipe website with no specific colour palette in mind. As he knows me so well he designed the logo with my favourite colour combinations of red and black.
 
 ### **Colour Scheme**
 
-The colour scheme of the website was dictated by the sites logo, made up of the colours black, white and red. The colours have a have a natural contrast which should lead to easy readability.
+The colour scheme of the website was dictated by the sites logo, made up of the colours black, white and red. The colours have a natural contrast which should lead to easy readability.
 
 * Black #000
 * Red #E01616
 * White #FFFFFC
+
+### **Navbar**
+
+The navbar is made using bootstrap classes to style and add responsiveness. It features the sites logo and various links. Different links are displayed dependent on if the current visitor is logged in or not. For smaller screens there is a navbar toggler to make navigation on smaller screens a pleasant experience.
 
 ## ** User Stories**
 
@@ -34,5 +38,5 @@ The colour scheme of the website was dictated by the sites logo, made up of the 
     * view how many likes a recipe has so that I can see which recipes are most popular.
 
 * As a **Site Admin** I can...
-    * can delete comments so that I can ensure they’re appropriate.
+    * delete comments so that I can ensure they’re appropriate.
     * delete user posted recipes so that I can ensure site posts are appropriate.
