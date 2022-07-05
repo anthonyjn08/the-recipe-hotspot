@@ -34,6 +34,14 @@ The homepage displays welcome message. The message displayed will depend on if t
 
 The recipe detail page opens when users click on a recipe. It displays the full recipe details, such as ingredients, instructions and cooking time. The image is also displayed and logged in users have ability to like/unlike the recipe and add or view comments.
 
+### **Add recipe**
+
+Registered users have the ability to add their own recipes. They do this using a form based on the recipe database model. Once they have submitted the form the recipe is added to the site for themselves and others to view.
+
+### **Edit/delete recipe**
+
+Registered users can also edit or delete their own posted recipes. There is a if statement in place to make sure that only the post creator can edit or delete their post. Admins/superusers can also delete other users posts but this can only be done through the admin panel.
+
 ### **Login/Logout/SignUp Pages**
 
 The login, logout and signup pages use the standard bootstrap/django features. The header and footer have been extended to these pages giving them a customised feel and appearance in line with the rest of the site.
