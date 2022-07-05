@@ -34,7 +34,9 @@ The homepage displays welcome message. The message displayed will depend on if t
 
 The recipe detail page opens when users click on a recipe. It displays the full recipe details, such as ingredients, instructions and cooking time. The image is also displayed and logged in users have ability to like/unlike the recipe and add or view comments.
 
+### **Login/Logout/SignUp Pages**
 
+The login, logout and signup pages use the standard bootstrap/django features. The header and footer have been extended to these pages giving them a customised feel and appearance in line with the rest of the site.
 
 ## ** User Stories**
 
