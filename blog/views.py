@@ -5,6 +5,7 @@ from django.views.generic.edit import UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from .models import Recipe, Comment
+from django.contrib import messages
 from .forms import RecipeForm, CommentForm
 
 
@@ -99,6 +100,7 @@ class RecipeDetail(View):
             comment.recipe = recipe
             comment.name = request.user
             comment.save()
+            messages.success(request, 'Thanks for your comment')
 
         else:
             comment_form = CommentForm()
