@@ -5,6 +5,10 @@ body {
 
 /* General Site Styling */
 
+a {
+    text-decoration: none;
+}
+
 .caveat-text {
     font-family: 'Caveat', sans-serif;
 }
@@ -25,7 +29,7 @@ body {
 
 .index-brand {
     color: #000;
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 
 .image-flash {

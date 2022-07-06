@@ -1,4 +1,5 @@
 # **The Recipe Hotspot**
+[Deployed Site](https://the-recipe-hotspot.herokuapp.com/)
 
 ## **Aim of the Site**
 
@@ -84,7 +85,7 @@ Registered users have the ability to add their own recipes. They do this using a
 
 ### **Edit/delete recipe**
 
-Registered users can also edit or delete their own posted recipes. There is a if statement in place to make sure that only the post creator can edit or delete their post. Admins/superusers can also delete other users posts but this can only be done through the admin panel.
+Registered users can also edit or delete their own posted recipes. There is an if statement in place to make sure that only the post creator can edit or delete their post. Admins/superusers can also delete other users posts but this can only be done through the admin panel.
 
 ### **Login/Logout/SignUp Pages**
 
