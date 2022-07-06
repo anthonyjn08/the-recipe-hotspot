@@ -131,3 +131,7 @@ The login, logout and signup pages use the standard bootstrap/django features. T
 * [Google Fonts](https://fonts.google.com/)
 * [Font Awesome](https://fontawesome.com/)
 * [Am I Responsive](https://ui.dev/amiresponsive)
+
+## **Testing and Bugs**
+
+The details for the testing and bugs can be found here in [TESTING.md](TESTING.MD)
