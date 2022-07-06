@@ -7,13 +7,14 @@
 
 <div class="container-fluid mt-5">
 
+    <!-- Recipe -->
     <div class="row">
         <div class="col-4">
             {% if "placeholder" in recipe.featured_image.url %}
-            <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg"
+            <img class="card-img-top" src="https://res.cloudinary.com/anthonyjn08/image/upload/v1657147325/placeholder_i1ysim.jpg"
                 alt="placeholder">
             {% else %}
-            <img class="card-img-top" src=" {{ recipe.featured_image.url }}">
+            <img class="card-img-top" src=" {{ recipe.featured_image.url }}" alt="recipe-image">
             {% endif %}
         </div>
         <div class="col-6">
@@ -37,42 +38,40 @@
             <p>{{ recipe.instructions | safe }}</p>
         </div>
     </div>
-    <div class="row">
 
+    <!-- Likes Button -->
+    <div class="row">
         <div class="col-1">
             <strong>
                 {% if user.is_authenticated %}
                 <form action="{% url 'recipe_like' recipe.slug %}" class="d-inline" method="POST">
                     {% csrf_token %}
                     {% if liked %}
-
                     <button type="submit" name="blogpost_id" value="{recipe.slug}}" class="btn-like"><i
                             class="fas fa-heart"></i></button>
-
                     {% else %}
-
                     <button type="submit" name="blogpost_id" value="{{recipe.slug}}" class="btn btn-like"><i
                             class="far fa-heart"></i></button>
-
                     {% endif %}
-
                 </form>
                 {% else %}
-
                 <span class="text-secondary"><i class="far fa-heart"></i></span>
                 {% endif %}
                 <span class="text-secondary">{{ recipe.number_of_likes }}</span>
             </strong>
-
         </div>
+
+        <!-- Comment Count -->
         <div class="col-1">
             {% with comments.count as total_comments %}
             <strong class="text-secondary"><i class="far fa-comments"></i>
-                <!-- Our total_comments variable goes before the closing strong tag -->
-                {{ total_comments}}</strong>
+                {{ total_comments}}
+            </strong>
             {% endwith %}
         </div>
     </div>
+
+    <!-- Update/Delete Recipe -->
     {% if user.is_authenticated %}
     {% if user.id == recipe.author.id %}
     <div class="row">
@@ -89,8 +88,9 @@
     {% endif %}
     {% endif %}
     <hr>
-    <div class="row">
 
+    <!-- Comments -->
+    <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3>Comments:</h3>
             <div class="card-body">
@@ -107,11 +107,6 @@
                 {% if request.user == comment.name %}
                 <a href="{% url 'delete_comment' comment.id %}"><button class="btn btn-outline-danger"><i
                     class="fa-solid fa-dumpster"></i> Delete</button></a>
-                <!-- <form method="POST" action="{% url 'delete_comment' comment.pk %}">
-                    {% csrf_token %}
-                    <button class="btn btn-outline-danger"><i
-                        class="fa-solid fa-dumpster"></i> Delete</button>
-                </form> -->
                 {% endif %}
                 {% endfor %}
             </div>
@@ -119,7 +114,6 @@
         <div class="col-md card mb-4 mt-3">
             <div class="card-body">
                 {% if user.is_authenticated %}
-
                 <h3>Leave a comment:</h3>
                 <p>Posting as : {{ user.username }}</p>
                 <form method="post" style="margin-top: 1.3em;">
@@ -129,7 +123,6 @@
                 </form>
                 {% endif %}
             </div>
-
         </div>
     </div>
 </div>
