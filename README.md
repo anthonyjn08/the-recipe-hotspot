@@ -17,11 +17,40 @@ I wanted the site to almost have a blog like feel with the UI displaying 2 rows 
     * view comments that have been made about recipes so that I can view the conversation.
     * post comments on recipes so that I can be involved in the conversation.
     * post my own recipes so that I can share my recipes with the site user base.
+    * like/unlike recipes so that I can interact with the content
     * view how many likes a recipe has so that I can see which recipes are most popular.
 
 * As a **Site Admin** I can...
+    * create, delete and update post so that I can manage the sites content.
     * delete comments so that I can ensure they’re appropriate.
     * delete user posted recipes so that I can ensure site posts are appropriate.
+
+## **Database Models**
+
+I created 2 database models for the website. A Recipe model for the recipes and a comments model for the comments feature
+
+**Recipe Model**
+* title = models.CharField(max_length=200, unique=True)
+* slug = models.SlugField(max_length=200, unique=True)
+* author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="recipes")
+* created_on = models.DateTimeField(auto_now=True)
+* featured_image = CloudinaryField("image", default="placeholder")
+* excerpt = models.TextField(blank=True)
+* ingredients = models.TextField()
+* instructions = models.TextField()
+* cooking_time = models.IntegerField()
+* updated_on = models.DateTimeField(auto_now=True)
+* meal_type = models.CharField(max_length=50)
+* meal_tags = models.CharField(max_length=50)
+* status = models.IntegerField(choices=STATUS, default=0)
+* likes = models.ManyToManyField(User, related_name="recipe_likes", blank=True)
+
+**Comments Model**
+* models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="comments")
+* name = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_comments")
+* body = models.TextField()
+* created_on = models.DateTimeField(auto_now_add=True)
+* updated_on = models.DateTimeField(auto_now_add=True)
 
 ## **Website Design**
 
