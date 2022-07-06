@@ -8,6 +8,21 @@ The aim of the site is to allow users to share their favourite recipes with the 
 
 I wanted the site to almost have a blog like feel with the UI displaying 2 rows of 3 recipes previews, which users are then able to click on to be taken to the full recipe detail view. I included meal type and meal tags in the recipe model to allow users to be able to search for these from a sidebar on the main page, although this feature is not currently live on the website and will be included in a future udpate to the site.  The meal types will be starter, main etc and the meal tags will include things such as what meat/fruits are in the meal, or even if the meal is gluten free.
 
+## ** User Stories**
+
+* As a **Site User** I can...
+    * view a paginated list of recipes.
+    * click on a recipe so that I can view it in full.
+    * create an account so that I can interact with the site.
+    * view comments that have been made about recipes so that I can view the conversation.
+    * post comments on recipes so that I can be involved in the conversation.
+    * post my own recipes so that I can share my recipes with the site user base.
+    * view how many likes a recipe has so that I can see which recipes are most popular.
+
+* As a **Site Admin** I can...
+    * delete comments so that I can ensure they’re appropriate.
+    * delete user posted recipes so that I can ensure site posts are appropriate.
+
 ## **Website Design**
 
 ### **The Recipe Hotspot Logo**
@@ -46,17 +61,17 @@ Registered users can also edit or delete their own posted recipes. There is a if
 
 The login, logout and signup pages use the standard bootstrap/django features. The header and footer have been extended to these pages giving them a customised feel and appearance in line with the rest of the site.
 
-## ** User Stories**
 
-* As a **Site User** I can...
-    * view a paginated list of recipes.
-    * click on a recipe so that I can view it in full.
-    * create an account so that I can interact with the site.
-    * view comments that have been made about recipes so that I can view the conversation.
-    * post comments on recipes so that I can be involved in the conversation.
-    * post my own recipes so that I can share my recipes with the site user base.
-    * view how many likes a recipe has so that I can see which recipes are most popular.
+## **Future Features**
 
-* As a **Site Admin** I can...
-    * delete comments so that I can ensure they’re appropriate.
-    * delete user posted recipes so that I can ensure site posts are appropriate.
+* **My recipes page**
+    * A page where a user can view all the recipes they have uploaded to the site. This way they can easily find and update or delete their recipes.
+
+* **Meal type/ meal tags sidebar**
+    * A side bar which displays a list of meal types and tags that users can click on and be redirected to paginated view of the type or tag they clicked on. For example types include main, starters, dessert etc. Clicking on starters for example, displays all recipes with starter as the meal type.
+
+* **Social Login**
+    * Allowing users to use their google or facebook acounts to register to the site.
+
+* **Hompage Recipe redirection**
+    * Currently when adding a recipe, updating a recipe, or deleting a comment, users are redirected back to the homepage when the form is submitted. I would like to find a way to redirect them back to the recipe they just added or were originally viewing.
