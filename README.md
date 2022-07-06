@@ -75,3 +75,30 @@ The login, logout and signup pages use the standard bootstrap/django features. T
 
 * **Hompage Recipe redirection**
     * Currently when adding a recipe, updating a recipe, or deleting a comment, users are redirected back to the homepage when the form is submitted. I would like to find a way to redirect them back to the recipe they just added or were originally viewing.
+
+* **Search Feature**
+    * Include a search feature in the sidebar so users can manually search for recipes.
+
+* **Random Recipes**
+    * Have a button users can click to be taken to a random recipe.
+
+## **Technologies Used**
+
+**Programming Languages**
+
+* [HTML](https://en.wikipedia.org/wiki/HTML)
+* [Python](https://www.python.org/)
+* [CSS](https://en.wikipedia.org/wiki/CSS)
+* [Javascript](https://www.javascript.com/)
+
+**Supporting Frameworks and Technologies**
+
+* [Django](https://www.djangoproject.com/)
+* [Bootstrap](https://getbootstrap.com/)
+* [Cloudinary](https://cloudinary.com/)
+* [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+* [Pixabay](https://pixabay.com/)
+* [Summernote](https://summernote.org/)
+* [Google Fonts](https://fonts.google.com/)
+* [Font Awesome](https://fontawesome.com/)
+* [Am I Responsive](https://ui.dev/amiresponsive)
