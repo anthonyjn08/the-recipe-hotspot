@@ -1,23 +1,12 @@
 body {
     background-color: #FFFFFC;
+    font-family: 'Roboto', sans-serif;
 }
 
-.excerpt {
-    color: #000;
-}
-
-.index-card {
-    border: 1px solid #000;
-    background-color: transparent;
-}
-
-.card {
-    border: none;
-    background-color: transparent;
-}
+/* General Site Styling */
 
 .caveat-text {
-    font-family: Caveat;
+    font-family: 'Caveat', sans-serif;
 }
 
 .brand {
@@ -27,13 +16,30 @@ body {
     color: #000;
 }
 
+/* Homepage */
+
+.index-card {
+    border: 1px solid #000;
+    background-color: transparent;
+}
+
+.excerpt {
+    color: #000;
+}
+
+/* Recipe Detail Page */
+
+.card {
+    border: none;
+    background-color: transparent;
+}
+
 .image-container {
     position: relative;
     text-align: center;
 }
 
 .image-flash {
-    /* position: justify; */
     bottom: 5%;
     min-width: 30%;
     left: -2px;
