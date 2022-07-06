@@ -11,12 +11,12 @@ body {
 
 .brand {
     text-transform: uppercase;
-    font-family: Caveat;
+    font-family: 'Caveat', sans-serif;
     text-decoration: underline #E01616;
     color: #000;
 }
 
-/* Homepage */
+/* Index */
 
 .index-card {
     border: 1px solid #000;
@@ -25,18 +25,6 @@ body {
 
 .excerpt {
     color: #000;
-}
-
-/* Recipe Detail Page */
-
-.card {
-    border: none;
-    background-color: transparent;
-}
-
-.image-container {
-    position: relative;
-    text-align: center;
 }
 
 .image-flash {
@@ -51,17 +39,23 @@ body {
     text-transform: uppercase;
 }
 
+/* Recipe Detail Page */
+
+.card {
+    border: none;
+    background-color: transparent;
+}
+
+/* Images */
+
 .card-img-top {
     width: 75%;
     height: 25vw;
     object-fit: cover;
 }
 
-.post-link {
-    text-decoration: none;
-    color: #000000;
+.image-container {
+    position: relative;
+    text-align: center;
 }
 
-.bg-footer {
-    background: #D6EFFF;
-}
