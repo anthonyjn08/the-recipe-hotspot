@@ -23,8 +23,9 @@ body {
     background-color: transparent;
 }
 
-.excerpt {
+.index-brand {
     color: #000;
+    text-decoration: none;
 }
 
 .image-flash {
