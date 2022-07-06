@@ -46,3 +46,11 @@ The site has been tested on various browsers across PC, mobile and tablet and wo
 ### **Test: 404 Errors**
 * **Expected outcome:** Users are redirected to a 404 page if they enter an invalid address to the base web address.
 * **Actual Outcome:** If users add invalid details to the web url then they are redirected to the 404 page.
+
+## **Bugs**
+
+**Edit/Delete Redirection**
+When users edit a recipe or delete a comment they are redirected to the homepage instead of back to the recipe page they were viewing. I have been unable to find a soluttion to this at present, but it is something I will try to find and resolve at a later date.
+
+**Created/Updated Date**
+When recipes are created, they are given the current date and time automatically as per the database model fields. If a recipe is updated however, the new created date is given. This changes the order the recipes are displayed on the homepage. I have an 'updated_on' field to cover this but need to figure out a way to lock in  the original date in the 'created_on' field.
