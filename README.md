@@ -21,7 +21,7 @@ I created some wireframes as a rough planning guide for how I wanted the site to
 
 ![Comments](/static/docs/images/add_comment_wf.JPG)
 
-## ** User Stories**
+## **User Stories**
 
 * As a **Site User** I can...
     * view a paginated list of recipes.
@@ -89,15 +89,21 @@ The colour scheme of the website was dictated by the sites logo, made up of the 
 
 ### **Homepage**
 
-The homepage displays welcome message. The message displayed will depend on if the visitor is logged in or not. There is a 2 rows of 3 recipes cards, making 6 in total, which is the limit before the user will need to change page. The recipe cards display the title, image for recipe, an excerpt describing the recipe, author, creation date and how many likes it has.
+* The homepage displays welcome message. The message displayed will depend on if the visitor is logged in or not. There is a 2 rows of 3 recipes cards, making 6 in total, which is the limit before the user will need to change page. The recipe cards display the title, image for recipe, an excerpt describing the recipe, author, creation date and how many likes it has.
+
+![Index.html](/static/docs/images/index.JPG)
 
 ### **Recipe Detail Page**
 
-The recipe detail page opens when users click on a recipe. It displays the full recipe details, such as ingredients, instructions and cooking time. The image is also displayed and logged in users have ability to like/unlike the recipe and add or view comments.
+* The recipe detail page opens when users click on a recipe. It displays the full recipe details, such as ingredients, instructions and cooking time. The image is also displayed and logged in users have ability to like/unlike the recipe and add or view comments.
+
+![Detail](/static/docs/images/recipe_detail.JPG)
 
 ### **Add recipe**
 
 Registered users have the ability to add their own recipes. They do this using a form based on the recipe database model. Once they have submitted the form the recipe is added to the site for themselves and others to view.
+
+![Recipe Form](/static/docs/images/add_recipe.JPG)
 
 ### **Edit/delete recipe**
 
@@ -107,6 +113,7 @@ Registered users can also edit or delete their own posted recipes. There is an i
 
 The login, logout and signup pages use the standard bootstrap/django features. The header and footer have been extended to these pages giving them a customised feel and appearance in line with the rest of the site.
 
+![Login Form](/static/docs/images/sign_in.JPG)
 
 ## **Future Features**
 
@@ -139,7 +146,7 @@ The login, logout and signup pages use the standard bootstrap/django features. T
 
 **Supporting Frameworks and Technologies**
 
-* [Django](https://www.djangoproject.com/) - The base of the project, used for logins, views, forms among other things.
+* [Django](https://www.djangoproject.com/) - The base of the project, used for logins, views, forms amongst other things.
 * [Bootstrap](https://getbootstrap.com/) - used for website design and responsiveness.
 * [Cloudinary](https://cloudinary.com/) - used for hosting all the images on the website.
 * [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - used to format forms across the site.
@@ -156,7 +163,7 @@ The details for the testing and bugs can be found here in [TESTING.md](TESTING.M
 * [Pixabay](https://pixabay.com/) - The placeholder image and image of the BBQ Ribs come from Pixaby. Images used on user recipes are all provided by the recipe uploader.
 * [Google Fonts](https://fonts.google.com/) - This was used to import the Roboto and Caveat fonts used on the website.
 * [Font Awesome](https://fontawesome.com/) - This was used for icons on across the site such as on buttons and the likes heart.
-* [Kevin Edwards/Kreeeytivitee](https://www.instagram.com/kreeeytivitee/?hl=en) - My childhood friends of nearly 30 years who designed my websites logo.
+* [Kevin Edwards/Kreeeytivitee](https://www.instagram.com/kreeeytivitee/?hl=en) - My childhood friends of nearly 30 years who designed the website logo.
 
 ### **Code**
 
