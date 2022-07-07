@@ -1,6 +1,13 @@
 # **The Recipe Hotspot**
 [Deployed Site](https://the-recipe-hotspot.herokuapp.com/)
 
+**Am I Responsive**
+
+At the time of deployment the Am I responsive and all similar sites we're not working. I even tested google.co.uk to confirm it was not just an issue with my site. I also asked my mentor to test and he confirmed he also had the same issue. I have screenshots simulating mobile and tablet design using the Google Chrome Dev tools.
+
+![Mobile](/static/docs/images/mobile_view.JPG)
+![Tablet](/static/docs/images/tablet_view.JPG)
+
 ## **Aim of the Site**
 
 The aim of the site is to allow users to share their favourite recipes with the site community and search for new recipes to try. Users will be able to like their favourite recipes and be involved in the conversation with the post owner by commenting on recipes. 
