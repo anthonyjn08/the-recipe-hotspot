@@ -5,9 +5,9 @@
 
 {% block content %}
 
+<!-- Delete Recipe -->
 <div class="container">
     {% if request.user == recipe.author %}
-    
     <div class="row mt-4 justify-content-md-center">
         <div class="col-6">
             <h1>Are You Sure?</h1>
@@ -23,7 +23,7 @@
     {% else %}
     <p>You do not have permission to view this page.</p>
     <div class="container text-center">
-        <a href="{% url 'home' %}" class="back-button btn-default">Back</a>
+        <a href="{% url 'home' %}" class="btn btn-danger btn-default">Back</a>
     </div>
     {% endif %}
 </div>
