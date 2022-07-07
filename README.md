@@ -9,6 +9,18 @@ The aim of the site is to allow users to share their favourite recipes with the 
 
 I wanted the site to almost have a blog like feel with the UI displaying 2 rows of 3 recipes previews, which users are then able to click on to be taken to the full recipe detail view. I included meal type and meal tags in the recipe model to allow users to be able to search for these from a sidebar on the main page, although this feature is not currently live on the website and will be included in a future udpate to the site.  The meal types will be starter, main etc and the meal tags will include things such as what meat/fruits are in the meal, or even if the meal is gluten free.
 
+## **Wireframes**
+
+I created some wireframes as a rough planning guide for how I wanted the site to appear. These are below.
+
+![Homepage Wireframe](/static/docs/images/homepage_wf.JPG)
+
+![Recipe Detail](/static/docs/images/recipe_detail_wf.JPG)
+
+![Add Recipe](/static/docs/images/add_recipe_wf.JPG)
+
+![Comments](/static/docs/images/add_comment_wf.JPG)
+
 ## ** User Stories**
 
 * As a **Site User** I can...
