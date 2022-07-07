@@ -156,6 +156,25 @@ The login, logout and signup pages use the standard bootstrap/django features. T
 
 The details for the testing and bugs can be found here in [TESTING.md](TESTING.MD)
 
+## **Deployment**
+
+The site has been deployed to Heroku using the below procedure.
+
+1. Use [GitHub](https://github.com) to build project.
+2. Ensure DEBUG is set to False in Settings.py
+3. Push built project code to GitHub.
+4. Navigate to [Heroku](https://heroku.com)
+5. Login or signup to the site.
+6. Select create a new app, select a unique name and region.
+7. In resources, search for and install Postgres database
+8. Click settings, then reveal config vars.
+9. Add the following keys with the relevant values - CLOUDINARY_URL, DATABASE_URL, PORT, SECRET_KEY
+10. Navigate to the deploy tab, choose GitHub as deployment method and connect to you GitHub account.
+11. Enter your repository and connect.
+12. Select either automatic deploys which automatically deploys whenever you push to GitHub, or manual deploys to deploy manually.
+13. Once deployment is finished, click view to be taken to the deployed app.
+14. [Live site here](https://the-recipe-hotspot.herokuapp.com//)
+
 ## **Credits**
 
 ### **Media**
