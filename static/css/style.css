@@ -17,19 +17,18 @@ a {
     text-transform: uppercase;
     font-family: 'Caveat', sans-serif;
     text-decoration: underline #E01616;
-    color: #000;
+    color: #000000;
 }
 
 /* Index */
 
 .index-card {
-    border: 1px solid #000;
+    border: 1px solid #000000;
     background-color: transparent;
 }
 
 .index-brand {
-    color: #000;
-    /* text-decoration: none; */
+    color: #000000;
 }
 
 .image-flash {
@@ -39,7 +38,7 @@ a {
 }
 
 .author {
-    color: #000;
+    color: #000000;
     margin: 4px;
     text-transform: uppercase;
 }

@@ -31,7 +31,7 @@ def add_recipe(request):
     }
 
     return render(request, 'add_recipe.html', context)
-    
+
 
 class EditRecipe(UpdateView):
     """
@@ -65,7 +65,7 @@ class RecipeList(generic.ListView):
 class RecipeDetail(View):
     """
     Recipe detail view to display full recipe when clicked on.
-    """    
+    """
     def get(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
@@ -73,7 +73,7 @@ class RecipeDetail(View):
         liked = False
         if recipe.likes.filter(id=self.request.user.id).exists():
             liked = True
-        
+
         return render(
             request,
             "recipe_detail.html",
@@ -138,6 +138,7 @@ class DeleteComment(DeleteView):
     model = Comment
     template_name = 'delete_comment.html'
     success_url = reverse_lazy('home')
+
 
 def about(request):
     return render(request, 'about.html')

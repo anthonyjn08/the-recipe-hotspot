@@ -54,3 +54,14 @@ When users edit a recipe or delete a comment they are redirected to the homepage
 
 **Created/Updated Date**
 When recipes are created, they are given the current date and time automatically as per the database model fields. If a recipe is updated however, the new created date is given. This changes the order the recipes are displayed on the homepage. I have an 'updated_on' field to cover this but need to figure out a way to lock in  the original date in the 'created_on' field.
+
+## **Validator Testing**
+
+**Python PEP8**
+I have run the python code through the [PEP8 Validator](http://pep8online.com/) which resulted in no errors.
+
+**HTML**
+I have tested the HTML code using the [W3C HTML Validator](https://validator.w3.org/). The errors found were caused by the django curly braces {} and also using {% extends "base.html" %} in place of <"head"> tags.
+
+**CSS**
+I have tested the CSS code using the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) and found no errors.
