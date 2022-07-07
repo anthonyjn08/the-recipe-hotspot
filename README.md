@@ -75,13 +75,17 @@ The sites log was designed by a childhood friend who I've know for about 30 year
 
 The colour scheme of the website was dictated by the sites logo, made up of the colours black, white and red. The colours have a natural contrast which should lead to easy readability.
 
-* Black #000
 * Red #E01616
+* Black #000000
 * White #FFFFFC
+
+![Colours](/static/docs/images/colours.JPG)
 
 ### **Navbar**
 
-The navbar is made using bootstrap classes to style and add responsiveness. It features the sites logo and various links. Different links are displayed dependent on if the current visitor is logged in or not. For smaller screens there is a navbar toggler to make navigation on smaller screens a pleasant experience.
+* The navbar is made using bootstrap classes to style and add responsiveness. It features the sites logo and various links. Different links are displayed dependent on if the current visitor is logged in or not. For smaller screens there is a navbar toggler to make navigation on smaller screens a pleasant experience.
+
+![Navbar](/static/docs/images/navbar.JPG)
 
 ### **Homepage**
 
@@ -135,16 +139,37 @@ The login, logout and signup pages use the standard bootstrap/django features. T
 
 **Supporting Frameworks and Technologies**
 
-* [Django](https://www.djangoproject.com/)
-* [Bootstrap](https://getbootstrap.com/)
-* [Cloudinary](https://cloudinary.com/)
-* [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
-* [Pixabay](https://pixabay.com/)
-* [Summernote](https://summernote.org/)
-* [Google Fonts](https://fonts.google.com/)
-* [Font Awesome](https://fontawesome.com/)
-* [Am I Responsive](https://ui.dev/amiresponsive)
+* [Django](https://www.djangoproject.com/) - The base of the project, used for logins, views, forms among other things.
+* [Bootstrap](https://getbootstrap.com/) - used for website design and responsiveness.
+* [Cloudinary](https://cloudinary.com/) - used for hosting all the images on the website.
+* [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - used to format forms across the site.
+* [Summernote](https://summernote.org/) - used for text input fields on the website to allow bullet points or numbered lists for fields like recipe instructions.
 
 ## **Testing and Bugs**
 
 The details for the testing and bugs can be found here in [TESTING.md](TESTING.MD)
+
+## **Credits**
+
+### **Media**
+
+* [Pixabay](https://pixabay.com/) - The placeholder image and image of the BBQ Ribs come from Pixaby. Images used on user recipes are all provided by the recipe uploader.
+* [Google Fonts](https://fonts.google.com/) - This was used to import the Roboto and Caveat fonts used on the website.
+* [Font Awesome](https://fontawesome.com/) - This was used for icons on across the site such as on buttons and the likes heart.
+* [Kevin Edwards/Kreeeytivitee](https://www.instagram.com/kreeeytivitee/?hl=en) - My childhood friends of nearly 30 years who designed my websites logo.
+
+### **Code**
+
+I used various resources to overcome different parts of this project. These are listed below
+
+* [Bootstrap Official Site](https://getbootstrap.com/)
+* [Django Project Website](https://www.djangoproject.com/)
+* [Codemy Youtube Channel](https://www.youtube.com/c/Codemycom)
+* [Stack Overflow Website and Community](https://stackoverflow.com/)
+* [Code Institute course program materials](https://codeinstitute.net/)
+
+### **Other Acknowledgements**
+
+* My wife Helen - My wife feels guilty for catching covid very close to my submission of this project, This meant I didn't have as much time as I would've like to dedicate to it, but that's nothing compared to the guilt I have over the many hours I've spent coding since starting the course but it will be worth it in the end.
+* Richard Wells - My Code Institute mentor who always remains calm when faced with my panic of feeling like I'm not progressing and constant imposter syndrome.
+* Various friends - Who encourage me on my journey and spent time testing my website for this project and uploaded recipes.
